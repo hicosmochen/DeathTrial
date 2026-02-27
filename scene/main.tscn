@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://nymas44f8x0q" path="res://assets/font/canglangxingkai.ttf" id="1_itxqv"]
 [ext_resource type="Texture2D" uid="uid://bxyf761qw588c" path="res://assets/png/background/background_title.png" id="1_v0l8b"]
+[ext_resource type="FontFile" uid="uid://ck872e1ha1a7i" path="res://assets/font/sanjixingkai.ttf" id="3_wp4xf"]
 
 [sub_resource type="Animation" id="Animation_v0l8b"]
 length = 0.001
@@ -17,10 +18,46 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(-240, 100)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label_game_start:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label_game_load:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label_game_exit:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_wp4xf"]
 resource_name = "new_animation"
-length = 1.8
+length = 3.1333334
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -28,10 +65,46 @@ tracks/0/path = NodePath("Label_title:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.8),
+"times": PackedFloat32Array(0.26666668, 1.8),
 "transitions": PackedFloat32Array(0.18946458, 2.6390157),
 "update": 0,
-"values": [Vector2(250, 1100), Vector2(250, 564)]
+"values": [Vector2(250, 1100), Vector2(250, 464)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label_game_start:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.8333334, 2.2666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label_game_load:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.2666667, 2.6666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label_game_exit:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.7, 3.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_brvut"]
@@ -41,10 +114,12 @@ _data = {
 }
 
 [node name="Node2D" type="Node2D" unique_id=1213514406]
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=414835022]
 position = Vector2(962, 537)
 texture = ExtResource("1_v0l8b")
+metadata/_edit_lock_ = true
 
 [node name="Label_title" type="Label" parent="." unique_id=754754241]
 offset_left = -240.0
@@ -58,6 +133,34 @@ theme_override_fonts/font = ExtResource("1_itxqv")
 theme_override_font_sizes/font_size = 96
 text = "死神的试炼"
 horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Label_game_start" type="Label" parent="." unique_id=1596528830]
+offset_left = 289.0
+offset_top = 625.0
+offset_right = 577.0
+offset_bottom = 713.0
+theme_override_fonts/font = ExtResource("3_wp4xf")
+theme_override_font_sizes/font_size = 72
+text = "开始游戏"
+
+[node name="Label_game_load" type="Label" parent="." unique_id=88023161]
+offset_left = 288.0
+offset_top = 771.0
+offset_right = 576.0
+offset_bottom = 859.0
+theme_override_fonts/font = ExtResource("3_wp4xf")
+theme_override_font_sizes/font_size = 72
+text = "加载存档"
+
+[node name="Label_game_exit" type="Label" parent="." unique_id=971436346]
+offset_left = 287.0
+offset_top = 908.0
+offset_right = 575.0
+offset_bottom = 996.0
+theme_override_fonts/font = ExtResource("3_wp4xf")
+theme_override_font_sizes/font_size = 72
+text = "退出游戏"
 
 [node name="AnimationPlayer_title" type="AnimationPlayer" parent="." unique_id=1207915715]
 libraries/ = SubResource("AnimationLibrary_brvut")
