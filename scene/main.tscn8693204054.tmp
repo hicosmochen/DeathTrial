@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://djukphvg6kxtr"]
+
+[ext_resource type="FontFile" uid="uid://nymas44f8x0q" path="res://assets/font/canglangxingkai.ttf" id="1_itxqv"]
+[ext_resource type="Script" uid="uid://dvj1mtdah8asp" path="res://script/label_title.gd" id="2_v0l8b"]
+
+[node name="Node2D" type="Node2D" unique_id=1213514406]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2064760077]
+position = Vector2(960, 540)
+
+[node name="Label_title" type="Label" parent="Camera2D" unique_id=754754241]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -66.5
+offset_right = 240.0
+offset_bottom = 66.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.23172793, 0.7792917, 0.6756805, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("1_itxqv")
+theme_override_font_sizes/font_size = 96
+text = "死神的试炼"
+horizontal_alignment = 1
+script = ExtResource("2_v0l8b")

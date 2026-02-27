@@ -1,22 +1,64 @@
 [gd_scene format=3 uid="uid://djukphvg6kxtr"]
 
+[ext_resource type="FontFile" uid="uid://nymas44f8x0q" path="res://assets/font/canglangxingkai.ttf" id="1_itxqv"]
+[ext_resource type="Texture2D" uid="uid://bxyf761qw588c" path="res://assets/png/background/background_title.png" id="1_v0l8b"]
+
+[sub_resource type="Animation" id="Animation_v0l8b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label_title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-240, 100)]
+}
+
+[sub_resource type="Animation" id="Animation_wp4xf"]
+resource_name = "new_animation"
+length = 1.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label_title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.8),
+"transitions": PackedFloat32Array(0.18946458, 2.6390157),
+"update": 0,
+"values": [Vector2(250, 1100), Vector2(250, 564)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_brvut"]
+_data = {
+&"RESET": SubResource("Animation_v0l8b"),
+&"new_animation": SubResource("Animation_wp4xf")
+}
+
 [node name="Node2D" type="Node2D" unique_id=1213514406]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2064760077]
-position = Vector2(960, 540)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=414835022]
+position = Vector2(962, 537)
+texture = ExtResource("1_v0l8b")
 
-[node name="Label" type="Label" parent="Camera2D" unique_id=346897962]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+[node name="Label_title" type="Label" parent="." unique_id=754754241]
 offset_left = -240.0
-offset_top = -66.5
+offset_top = 100.0
 offset_right = 240.0
-offset_bottom = 66.5
-grow_horizontal = 2
-grow_vertical = 2
+offset_bottom = 216.0
+theme_override_colors/font_color = Color(0.23172793, 0.7792917, 0.6756805, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_fonts/font = ExtResource("1_itxqv")
 theme_override_font_sizes/font_size = 96
 text = "死神的试炼"
 horizontal_alignment = 1
+
+[node name="AnimationPlayer_title" type="AnimationPlayer" parent="." unique_id=1207915715]
+libraries/ = SubResource("AnimationLibrary_brvut")
+autoplay = &"new_animation"
