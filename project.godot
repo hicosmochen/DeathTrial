@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="DeathTrial"
+config/name="死神的试炼"
 run/main_scene="uid://djukphvg6kxtr"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://dxmk4adgj1wl1"
 
 [display]
 

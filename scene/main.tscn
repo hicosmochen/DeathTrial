@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://djukphvg6kxtr"]
 
+[ext_resource type="Script" uid="uid://cqe5xy87f2xym" path="res://script/main.gd" id="1_0ha60"]
 [ext_resource type="FontFile" uid="uid://nymas44f8x0q" path="res://assets/font/canglangxingkai.ttf" id="1_itxqv"]
 [ext_resource type="Texture2D" uid="uid://bxyf761qw588c" path="res://assets/png/background/background_title.png" id="1_v0l8b"]
 [ext_resource type="FontFile" uid="uid://ck872e1ha1a7i" path="res://assets/font/sanjixingkai.ttf" id="3_wp4xf"]
+[ext_resource type="Script" uid="uid://clhhb07siwa6a" path="res://script/audio_stream_player_background.gd" id="4_brvut"]
 
 [sub_resource type="Animation" id="Animation_v0l8b"]
-length = 0.001
+length = 2.1333334
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -116,9 +118,11 @@ _data = {
 [node name="Node2D" type="Node2D" unique_id=1213514406]
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=414835022]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=414835022 node_paths=PackedStringArray("musicPlayer")]
 position = Vector2(962, 537)
 texture = ExtResource("1_v0l8b")
+script = ExtResource("1_0ha60")
+musicPlayer = NodePath("../AudioStreamPlayer2D")
 metadata/_edit_lock_ = true
 
 [node name="Label_title" type="Label" parent="." unique_id=754754241]
@@ -165,3 +169,6 @@ text = "退出游戏"
 [node name="AnimationPlayer_title" type="AnimationPlayer" parent="." unique_id=1207915715]
 libraries/ = SubResource("AnimationLibrary_brvut")
 autoplay = &"new_animation"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1179776775]
+script = ExtResource("4_brvut")
