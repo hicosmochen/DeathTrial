@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://b8wfn2rtrv2he"]
+
+[ext_resource type="Script" uid="uid://bb2jqupub83g2" path="res://script/dialog_confirm.gd" id="1_kbndi"]
+[ext_resource type="FontFile" uid="uid://ck872e1ha1a7i" path="res://assets/font/sanjixingkai.ttf" id="1_oddvj"]
+[ext_resource type="FontFile" uid="uid://nymas44f8x0q" path="res://assets/font/canglangxingkai.ttf" id="2_ocnn7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oddvj"]
+bg_color = Color(0.7397317, 0.6813287, 0.597427, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="DialogConfirm" type="Node" unique_id=54147907 node_paths=PackedStringArray("title", "descript")]
+script = ExtResource("1_kbndi")
+title = NodePath("Label_title")
+descript = NodePath("Label_desc")
+metadata/_edit_horizontal_guides_ = [732.0]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=838413740]
+self_modulate = Color(0.011764706, 0.011764706, 0.011764706, 0.5058824)
+offset_right = 1913.0
+offset_bottom = 1077.0
+
+[node name="Pannel" type="Panel" parent="." unique_id=937141669]
+offset_left = 554.0
+offset_top = 314.0
+offset_right = 1343.0
+offset_bottom = 902.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_oddvj")
+
+[node name="Label_title" type="Label" parent="." unique_id=866547117]
+self_modulate = Color(0.17068037, 0.17068037, 0.17068037, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -117.0
+offset_right = 128.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_oddvj")
+theme_override_font_sizes/font_size = 64
+text = "我是标题"
+
+[node name="Label_desc" type="Label" parent="." unique_id=327212577]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = 14.0
+offset_right = 192.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.23137255, 0.23137255, 0.23137255, 0.89411765)
+theme_override_fonts/font = ExtResource("2_ocnn7")
+theme_override_font_sizes/font_size = 48
+text = "我是一段描述文字"
+
+[node name="Button_confirm" type="Button" parent="." unique_id=730242063]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.0
+offset_top = 193.0
+offset_right = -95.0
+offset_bottom = 293.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_oddvj")
+theme_override_font_sizes/font_size = 48
+text = "确定"
+
+[node name="Button_cancel" type="Button" parent="." unique_id=2020728243]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 98.0
+offset_top = 192.0
+offset_right = 290.0
+offset_bottom = 292.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_oddvj")
+theme_override_font_sizes/font_size = 48
+text = "取消"

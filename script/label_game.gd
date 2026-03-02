@@ -41,5 +41,24 @@ func game_load():
 	
 # 退出游戏
 func game_exit():
-	print("退出游戏被点击")
+	# 这里需要去加载对话框的场景
+	var dialog_scene = load("res://scene/dialog_confirm.tscn").instantiate()
+	dialog_scene._update_title("确认退出")
+	dialog_scene._update_descript("您确定需要退出游戏吗?")
+	# 将场景作为子场景, 添加到场景树中
+	add_child(dialog_scene)
+	
+	# 信号监听, 处理确定按钮, 点击的情况
+	dialog_scene.confirm_clicked.connect(func click():
+		# 整个场景树被退出
+		get_tree().quit() 
+		pass
+	)
+	
+	# 信号监听, 处理取消按钮, 点击的情况
+	dialog_scene.cancel_clicked.connect(func click(): 
+		# 当前场景退出
+		dialog_scene.queue_free()
+		pass
+	)
 	pass

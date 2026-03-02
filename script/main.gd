@@ -7,6 +7,9 @@ extends Sprite2D
 @export var labelGameLoad:Label
 # 游戏退出
 @export var labelGameExit:Label
+# 对话框场景
+@export var dialogConfirm:Node
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
