@@ -15,8 +15,10 @@ func _gui_input(event: InputEvent) -> void:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			modulate = Color(1.0, 0.688, 0.873, 1.0)
 			hand_click()
-		else:
+		elif event.button_mask:
 			modulate = Color(0.0, 0.706, 0.0, 1.0)
+		else:
+			modulate = Color(1.0, 1.0, 1.0, 1.0)
 	pass
 
 # 点击之后, 分发点击的逻辑
