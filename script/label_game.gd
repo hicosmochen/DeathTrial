@@ -34,11 +34,26 @@ func hand_click():
 # 开始游戏
 func game_start():
 	print("开始游戏被点击")
+	# 加载一个场景
+	# 创建黑色遮罩
+	var fade_rect = $"../ColorRect"
+	fade_rect.z_index = 10
+	fade_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var animate =$"../ColorRect/AnimatedSprite2D"
+	animate.play()
+	animate.animation_finished.connect(change_scene_simple)
 	pass
 	
 # 加载存档
 func game_load():
 	print("加载存档被点击")
+	pass
+
+# 加载第一个场景
+# 最简单的方式 - 直接切换   
+func change_scene_simple():
+	# 切换场景
+	get_tree().change_scene_to_file("res://scene/zhang_01.tscn")
 	pass
 	
 # 退出游戏

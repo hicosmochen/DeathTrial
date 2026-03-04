@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dw0n7j8b144gc"]
+
+[ext_resource type="Script" uid="uid://c560814qlqndi" path="res://script/zhang_01_root.gd" id="1_nvwn3"]
+[ext_resource type="Texture2D" uid="uid://bf0q8uyaux57m" path="res://assets/png/background/zhangbg_01.png" id="1_yipp6"]
+[ext_resource type="PackedScene" uid="uid://bbbweje6kkoh7" path="res://scene/game_head.tscn" id="3_px3wq"]
+
+[node name="Zhang01" type="Node2D" unique_id=1606042055]
+script = ExtResource("1_nvwn3")
+
+[node name="Sprite_bg" type="Sprite2D" parent="." unique_id=1611726429]
+position = Vector2(960, 540)
+texture = ExtResource("1_yipp6")
+
+[node name="GameHead" parent="." unique_id=1506434610 instance=ExtResource("3_px3wq")]

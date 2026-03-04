@@ -1,83 +1,11 @@
 [gd_scene format=3 uid="uid://djukphvg6kxtr"]
 
-[ext_resource type="Texture2D" uid="uid://b28ddv0bv170g" path="res://assets/png/guodu/guodu_attack_01.png" id="1_0d4pv"]
 [ext_resource type="Script" uid="uid://cqe5xy87f2xym" path="res://script/main.gd" id="1_0ha60"]
 [ext_resource type="FontFile" uid="uid://nymas44f8x0q" path="res://assets/font/canglangxingkai.ttf" id="1_itxqv"]
 [ext_resource type="Texture2D" uid="uid://bxyf761qw588c" path="res://assets/png/background/background_title.png" id="1_v0l8b"]
-[ext_resource type="Texture2D" uid="uid://cxdhfpsya7j3l" path="res://assets/png/guodu/guodu_attack_02.png" id="2_gtqqq"]
-[ext_resource type="Texture2D" uid="uid://cnpj1m46bf0v" path="res://assets/png/guodu/guodu_attack_03.png" id="3_gn2wi"]
 [ext_resource type="FontFile" uid="uid://ck872e1ha1a7i" path="res://assets/font/sanjixingkai.ttf" id="3_wp4xf"]
 [ext_resource type="Script" uid="uid://clhhb07siwa6a" path="res://script/audio_stream_player_background.gd" id="4_brvut"]
-[ext_resource type="Texture2D" uid="uid://0uhroroiun0t" path="res://assets/png/guodu/guodu_attack_04.png" id="4_p8adh"]
 [ext_resource type="Script" uid="uid://ccjhtubbmhvy8" path="res://script/label_game.gd" id="5_4j5ol"]
-[ext_resource type="Texture2D" uid="uid://bckr7tid66hxs" path="res://assets/png/guodu/guodu_attack_05.png" id="5_oldxj"]
-[ext_resource type="Texture2D" uid="uid://d3rcij0quf5i1" path="res://assets/png/guodu/guodu_attack_06.png" id="6_4jm02"]
-[ext_resource type="Texture2D" uid="uid://cuswpgy7ycihg" path="res://assets/png/guodu/guodu_attack_07.png" id="7_vneqc"]
-[ext_resource type="Texture2D" uid="uid://c7sovfuydh6ks" path="res://assets/png/guodu/guodu_attack_08.png" id="8_io27d"]
-[ext_resource type="Texture2D" uid="uid://dfjs1j6svfl4n" path="res://assets/png/guodu/guodu_attack_09.png" id="9_fa8t4"]
-[ext_resource type="Texture2D" uid="uid://b5ogsblymu1eo" path="res://assets/png/guodu/guodu_attack_10.png" id="10_rg6nf"]
-[ext_resource type="Texture2D" uid="uid://bv0obshy0scuw" path="res://assets/png/guodu/guodu_attack_11.png" id="11_mjuaj"]
-[ext_resource type="Texture2D" uid="uid://c8qd2421exvb2" path="res://assets/png/guodu/guodu_attack_12.png" id="12_gj7ui"]
-[ext_resource type="Texture2D" uid="uid://c0sytx0qf15v" path="res://assets/png/guodu/guodu_attack_13.png" id="13_bmc2w"]
-[ext_resource type="Texture2D" uid="uid://bx75yie8hev6a" path="res://assets/png/guodu/guodu_attack_14.png" id="14_7ty4q"]
-[ext_resource type="Texture2D" uid="uid://hkpr7jcloj70" path="res://assets/png/guodu/guodu_attack_15.png" id="15_7xrs8"]
-[ext_resource type="Texture2D" uid="uid://bkqs0ot814fg4" path="res://assets/png/guodu/guodu_attack_16.png" id="16_kpobt"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_216wm"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_0d4pv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_gtqqq")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_gn2wi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_p8adh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_oldxj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_4jm02")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_vneqc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_io27d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_fa8t4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_rg6nf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_mjuaj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_gj7ui")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_bmc2w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_7ty4q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_7xrs8")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_kpobt")
-}],
-"loop": false,
-"name": &"default",
-"speed": 12.0
-}]
 
 [sub_resource type="Theme" id="Theme_0ha60"]
 
@@ -192,18 +120,6 @@ _data = {
 
 [node name="Node2D" type="Node2D" unique_id=1213514406]
 metadata/_edit_lock_ = true
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1132155003]
-offset_right = 1928.0
-offset_bottom = 1080.0
-color = Color(8.731843e-06, 8.731843e-06, 8.731838e-06, 1)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ColorRect" unique_id=1792007393]
-position = Vector2(960, 540)
-sprite_frames = SubResource("SpriteFrames_216wm")
-autoplay = "default"
-frame = 15
-frame_progress = 1.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=414835022 node_paths=PackedStringArray("musicPlayer", "labelGameStart", "labelGameLoad", "labelGameExit")]
 position = Vector2(962, 537)
