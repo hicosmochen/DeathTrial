@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://bbbweje6kkoh7"]
+
+[ext_resource type="Texture2D" uid="uid://cly4avv7041t3" path="res://assets/png/heros/create_icon_boy_01.png" id="1_1bdha"]
+[ext_resource type="Script" uid="uid://dkqrihtmdx0vq" path="res://script/progress_bar_level.gd" id="2_hjh3w"]
+[ext_resource type="Texture2D" uid="uid://bl4mptnay47xj" path="res://assets/png/button/zhuangbei_btn_normal.png" id="3_tugaf"]
+[ext_resource type="Script" uid="uid://ol5sr1p4nktp" path="res://script/button_game.gd" id="4_e2y23"]
+[ext_resource type="Texture2D" uid="uid://1peru31w5tfp" path="res://assets/png/button/beibao_btn_normal.png" id="4_g8v2q"]
+[ext_resource type="Texture2D" uid="uid://c2kf37tklsj1t" path="res://assets/png/button/renwu_btn_normal.png" id="5_e2y23"]
+[ext_resource type="Texture2D" uid="uid://bn28jwh31qg86" path="res://assets/png/button/zhuangbei_btn_press.png" id="5_lu4cb"]
+[ext_resource type="Texture2D" uid="uid://bl8c7ku7suv7c" path="res://assets/png/button/ditu_btn_normal.png" id="6_lu4cb"]
+[ext_resource type="Texture2D" uid="uid://cgtmmr7cpperi" path="res://assets/png/button/beibao_btn_press.png" id="7_lu4cb"]
+[ext_resource type="Texture2D" uid="uid://c5egtrpf124dx" path="res://assets/png/button/renwu_btn_press.png" id="9_rgh8y"]
+[ext_resource type="Texture2D" uid="uid://xfif63c6f8tf" path="res://assets/png/button/ditu_btn_press.png" id="11_dynqc"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_hjh3w"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_w3a32"]
+
+[node name="GameHead" type="Node2D" unique_id=1506434610]
+metadata/_edit_horizontal_guides_ = [163.0]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2051096734]
+self_modulate = Color(1, 1, 1, 0.43137255)
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 1921.0
+offset_bottom = 310.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=139426410]
+position = Vector2(69, 86)
+texture = ExtResource("1_1bdha")
+
+[node name="ColorRectHP" type="ColorRect" parent="." unique_id=872595135]
+offset_left = 137.0
+offset_top = 45.0
+offset_right = 566.0
+offset_bottom = 85.0
+color = Color(0.7666196, 0.76661956, 0.76661956, 1)
+
+[node name="TextureProgressBarHP" type="TextureProgressBar" parent="." unique_id=1936584007 node_paths=PackedStringArray("Name_Label")]
+self_modulate = Color(0.96608347, 0.26709843, 0.32892495, 1)
+offset_left = 137.0
+offset_top = 45.0
+offset_right = 566.0
+offset_bottom = 85.0
+nine_patch_stretch = true
+texture_progress = SubResource("CanvasTexture_hjh3w")
+script = ExtResource("2_hjh3w")
+Name_Label = NodePath("../Label_Percentage_HP")
+Name_start = "血量"
+
+[node name="Label_Percentage_HP" type="Label" parent="." unique_id=156353878]
+offset_left = 581.0
+offset_top = 41.0
+offset_right = 645.0
+offset_bottom = 86.0
+theme_override_font_sizes/font_size = 32
+text = "血量"
+
+[node name="ColorRectENER" type="ColorRect" parent="." unique_id=441855914]
+offset_left = 135.0
+offset_top = 105.0
+offset_right = 568.0
+offset_bottom = 145.0
+color = Color(0.7647059, 0.7647059, 0.7647059, 1)
+
+[node name="TextureProgressBarENER" type="TextureProgressBar" parent="." unique_id=1568803349 node_paths=PackedStringArray("Name_Label")]
+self_modulate = Color(0.07450981, 0.5058824, 0.972549, 1)
+offset_left = 135.0
+offset_top = 105.0
+offset_right = 567.0
+offset_bottom = 145.0
+nine_patch_stretch = true
+texture_progress = SubResource("CanvasTexture_w3a32")
+script = ExtResource("2_hjh3w")
+Name_Label = NodePath("../Label_Percentage_ENER")
+Name_start = "蓝量"
+
+[node name="Label_Percentage_ENER" type="Label" parent="." unique_id=1131627978]
+offset_left = 580.0
+offset_top = 100.0
+offset_right = 644.0
+offset_bottom = 145.0
+theme_override_font_sizes/font_size = 32
+text = "蓝量"
+
+[node name="Button_zhuangbei" type="Button" parent="." unique_id=1531944565]
+offset_left = 7.0
+offset_top = 169.0
+offset_right = 169.0
+offset_bottom = 249.0
+action_mode = 0
+icon = ExtResource("3_tugaf")
+flat = true
+script = ExtResource("4_e2y23")
+icon_press = ExtResource("5_lu4cb")
+icon_text = "装备"
+
+[node name="Button_beibao" type="Button" parent="." unique_id=1834449951]
+offset_left = 187.0
+offset_top = 167.0
+offset_right = 349.0
+offset_bottom = 247.0
+icon = ExtResource("4_g8v2q")
+flat = true
+script = ExtResource("4_e2y23")
+icon_press = ExtResource("7_lu4cb")
+icon_text = "背包"
+
+[node name="Button_renwu" type="Button" parent="." unique_id=650850849]
+offset_left = 363.0
+offset_top = 166.0
+offset_right = 525.0
+offset_bottom = 246.0
+icon = ExtResource("5_e2y23")
+flat = true
+script = ExtResource("4_e2y23")
+icon_press = ExtResource("9_rgh8y")
+icon_text = "任务"
+
+[node name="Button_ditu" type="Button" parent="." unique_id=49859716]
+offset_left = 538.0
+offset_top = 166.0
+offset_right = 700.0
+offset_bottom = 246.0
+icon = ExtResource("6_lu4cb")
+flat = true
+script = ExtResource("4_e2y23")
+icon_press = ExtResource("11_dynqc")
+icon_text = "地图"
