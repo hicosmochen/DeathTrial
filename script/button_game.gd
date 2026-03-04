@@ -15,6 +15,7 @@ func _ready() -> void:
 func on_button_down() -> void:
 	icon = icon_press
 	print("当前按下的是: ", icon_text)
+	$"../AudioStreamPlayer2D".play_sound_from_path("res://assets/music/computer-mouse-click.mp3")
 	pass
  
 func on_button_up() -> void:

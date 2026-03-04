@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://5fc1efphp3j" path="res://assets/png/heros/create_icon_girl_04.png" id="13_8o02h"]
 [ext_resource type="Texture2D" uid="uid://dq4ib62gcted3" path="res://assets/png/button/xitong_btn_press.png" id="14_emw8s"]
 [ext_resource type="Texture2D" uid="uid://dmfdwbsigrr0q" path="res://assets/png/button/xitong_btn_normal.png" id="14_p4s5b"]
+[ext_resource type="Script" uid="uid://clhhb07siwa6a" path="res://script/audio_stream_player_background.gd" id="16_784xl"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_hjh3w"]
 
@@ -203,3 +204,6 @@ flat = true
 script = ExtResource("4_e2y23")
 icon_press = ExtResource("14_emw8s")
 icon_text = "系统"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=138829025]
+script = ExtResource("16_784xl")
