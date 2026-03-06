@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bbbweje6kkoh7"]
 
-[ext_resource type="Texture2D" uid="uid://cly4avv7041t3" path="res://assets/png/heros/create_icon_boy_01.png" id="1_1bdha"]
+[ext_resource type="Texture2D" uid="uid://cly4avv7041t3" path="res://assets/png/heros/create_icon/create_icon_boy_01.png" id="1_1bdha"]
 [ext_resource type="Script" uid="uid://dkqrihtmdx0vq" path="res://script/progress_bar_level.gd" id="2_hjh3w"]
 [ext_resource type="Texture2D" uid="uid://bl4mptnay47xj" path="res://assets/png/button/zhuangbei_btn_normal.png" id="3_tugaf"]
 [ext_resource type="Script" uid="uid://ol5sr1p4nktp" path="res://script/button_game.gd" id="4_e2y23"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c5egtrpf124dx" path="res://assets/png/button/renwu_btn_press.png" id="9_rgh8y"]
 [ext_resource type="Texture2D" uid="uid://xfif63c6f8tf" path="res://assets/png/button/ditu_btn_press.png" id="11_dynqc"]
 [ext_resource type="FontFile" uid="uid://c8nt7pvtxhb7w" path="res://assets/font/shanhaiguochaobangshuw.ttf" id="12_qchws"]
-[ext_resource type="Texture2D" uid="uid://5fc1efphp3j" path="res://assets/png/heros/create_icon_girl_04.png" id="13_8o02h"]
+[ext_resource type="Texture2D" uid="uid://5fc1efphp3j" path="res://assets/png/heros/create_icon/create_icon_girl_04.png" id="13_8o02h"]
 [ext_resource type="Texture2D" uid="uid://dq4ib62gcted3" path="res://assets/png/button/xitong_btn_press.png" id="14_emw8s"]
 [ext_resource type="Texture2D" uid="uid://dmfdwbsigrr0q" path="res://assets/png/button/xitong_btn_normal.png" id="14_p4s5b"]
 [ext_resource type="Script" uid="uid://clhhb07siwa6a" path="res://script/audio_stream_player_background.gd" id="16_784xl"]
